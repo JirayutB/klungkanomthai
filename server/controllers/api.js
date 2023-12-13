@@ -27,7 +27,7 @@ module.exports = class API {
         dessert.image = imagename;
         try {
             await Dessert.create(dessert);
-            res.status(201).json({ message: "Dessert created successfully"});
+            res.status(201).json({ message: "เพิ่มขนมสำเร็จ!"});
         } catch (err) {
             res.status(400).json({ message: err.message });
         }
@@ -51,7 +51,7 @@ module.exports = class API {
 
         try {
             await Dessert.findByIdAndUpdate(id, newDessert);
-            res.status(200).json({ message: "Dessert updated successfully"});
+            res.status(200).json({ message: "แก้ไขข้อมูลขนมสำเร็จ!"});
         } catch (err) {
             res.status(404).json({ message: err.message });
         }
@@ -68,7 +68,7 @@ module.exports = class API {
                     console.log(err);
                 }
             }
-            res.status(200).json({ message: "Dessert deleted successfully"});
+            res.status(200).json({ message: "ขนมถูกลบสำเร็จ!"});
         } catch (err) {
             res.status(404).json({ message: err.message });
         }

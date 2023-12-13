@@ -4,10 +4,10 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>
-            KlungKanomThai
+            คลังขนมไทย
           </v-list-item-title>
           <v-list-item-subtitle>
-            Thai Desserts Information
+            ระบบข้อมูลขนมไทย
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -29,7 +29,7 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Desserts</v-toolbar-title>
+      <v-toolbar-title>คลังขนมไทย</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -43,9 +43,9 @@ export default {
   data: () => ({ 
     drawer: null,
     items: [
-        { title: "Home", icon: 'mdi-home', link: "/" },
-        { title: "Login", icon: 'mdi-account', link: "/login" },
-        { title: "Logout", icon: 'mdi-account', link: "/home" },
+        { title: "หน้าหลัก", icon: 'mdi-home', link: "/" },
+        { title: "เข้าสู่ระบบ", icon: 'mdi-account', link: "/login" },
+        { title: "ออกจากระบบ", icon: 'mdi-account', link: "/" },
       ], 
   }),
 }

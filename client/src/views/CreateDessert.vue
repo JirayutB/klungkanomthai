@@ -3,25 +3,25 @@
     <v-row no-gutters>
       <v-col cols="10" class="mx-auto">
         <v-card class="pa-5">
-          <v-card-title>Create New Dessert</v-card-title>
+          <v-card-title>เพิ่มขนมไทย</v-card-title>
           <v-divider></v-divider>
           <v-form ref="form" @submit.prevent="submitForm" class="pa-5" enctype="multipart/form-data">
-            <v-text-field label="Name" v-model="name" prepend-icon="mdi-note" :rules="rules"></v-text-field>
+            <v-text-field label="ชื่อภาษาไทย" v-model="thainame" prepend-icon="mdi-note" :rules="rules"></v-text-field>
 
-            <v-text-field label="English Name" v-model="engname" prepend-icon="mdi-note" :rules="rules"></v-text-field>
+            <v-text-field label="ชื่อภาษาอังกฤษ" v-model="engname" prepend-icon="mdi-note" :rules="rules"></v-text-field>
 
-            <v-textarea label="Detail" v-model="detail" prepend-icon="mdi-information" :rules="rules"></v-textarea>
+            <v-textarea label="คำอธิบาย" v-model="detail" prepend-icon="mdi-information" :rules="rules"></v-textarea>
 
-            <v-select label="Dessert Zone" v-model="dessertzone" prepend-icon="mdi-flag" :rules="rules"
+            <v-select label="ภูมิภาค" v-model="dessertzone" prepend-icon="mdi-flag" :rules="rules"
               :items="['ภาคกลาง', 'ภาคเหนือ', 'ภาคตะวันออกเฉียงเหนือ', 'ภาคตะวันออก', 'ภาคใต้', 'ทุกภาค']" variant="outlined"></v-select>
 
-            <v-select label="Sweet Level" v-model="sweetlevel" prepend-icon="mdi-note" :rules="rules"
-            :items="['1', '2', '3', '4', '5']" variant="outlined"></v-select>
+            <v-select label="ระดับความหวาน" v-model="sweetlevel" prepend-icon="mdi-note" :rules="rules"
+            :items="['1 ไม่หวาน', '2 หวานน้อย', '3 หวานปานกลาง', '4 หวาน', '5 หวานมาก']" variant="outlined"></v-select>
 
             <v-file-input @change="selectFile" :rules="rules" show-size-counter multiple
-              label="Select Image"></v-file-input>
+              label="เลือกรูปภาพขนม"></v-file-input>
 
-            <v-btn type="submit" class="mt-3" color="primary">Create Dessert</v-btn>
+            <v-btn type="submit" class="mt-3" color="primary">เพิ่มขนม</v-btn>
           </v-form>
         </v-card>
       </v-col>
@@ -37,7 +37,7 @@ export default {
     return {
       rules: [(value) => !!value || 'This field is required!'],
       dessert: {
-        name: "",
+        thainame: "",
         engname: "",
         detail: "",
         dessertzone: "",
@@ -54,7 +54,7 @@ export default {
     async submitForm() {
       const formData = new FormData();
       formData.append('image', this.image);
-      formData.append('name', this.name);
+      formData.append('thainame', this.thainame);
       formData.append('engname', this.engname);
       formData.append('detail', this.detail);
       formData.append('dessertzone', this.dessertzone);

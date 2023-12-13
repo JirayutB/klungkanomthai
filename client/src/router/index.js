@@ -6,6 +6,7 @@ import Dessert from '../views/Dessert.vue'
 import AdminHome from '../views/AdminHome.vue'
 import Login from '../views/Login.vue'
 import EditDessert from '../views/EditDessert.vue'
+import AdminDessert from '../views/AdminDessert.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,6 +24,11 @@ const routes = [
     path: '/dessert/:id',
     name: 'dessert',
     component: Dessert
+  },
+  {
+    path: '/admindessert/:id',
+    name: 'admindessert',
+    component: AdminDessert
   },
   {
     path: '/login',

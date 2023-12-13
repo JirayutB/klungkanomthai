@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const dessertSchema = mongoose.Schema({
-    name: String,
+    thainame: String,
     engname: String,
     detail: String,
     dessertzone: String,
-    sweetlevel: Number,
+    sweetlevel: String,
     image: String
 });
 

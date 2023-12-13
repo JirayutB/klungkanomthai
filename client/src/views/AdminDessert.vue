@@ -9,6 +9,11 @@
                             <v-col sm="2">
                                 <v-btn small outlined color="primary">{{ dessert.dessertzone }}</v-btn>
                             </v-col>
+                            <v-col sm="10" class="d-flex justify-end">
+                                <v-btn color="success" text
+                                    :to="{ name: 'edit-dessert', params: { id: dessert._id } }">แก้ไข</v-btn>
+                                <v-btn color="red" text @click="removeDessert(dessert._id)">ลบ</v-btn>
+                            </v-col>
                         </v-row>
                     </v-card-actions>
                     <v-card-subtitle class="headline">
