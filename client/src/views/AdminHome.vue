@@ -31,11 +31,7 @@
       หมวดหมู่: {{ selectedCategory }}
     </span>
   </v-col>
-  <v-row>
-  <v-col>
-    <v-pagination v-model="currentPage" :length="Math.ceil(filteredDesserts.length / dessertsPerPage)"></v-pagination>
-  </v-col>
-</v-row>
+
     </v-row>
     
 
@@ -59,8 +55,11 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-col sm="4" class="pa-3" v-for="dessert in paginatedDesserts" :key="dessert._id">
-</v-col>
+    <v-row>
+  <v-col>
+    <v-pagination v-model="currentPage" :length="Math.ceil(filteredDesserts.length / dessertsPerPage)"></v-pagination>
+  </v-col>
+</v-row>
 
   </v-container>
 </template>
