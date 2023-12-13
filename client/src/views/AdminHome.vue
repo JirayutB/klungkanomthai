@@ -31,12 +31,13 @@
       หมวดหมู่: {{ selectedCategory }}
     </span>
   </v-col>
-    </v-row>
-    <v-row>
+  <v-row>
   <v-col>
     <v-pagination v-model="currentPage" :length="Math.ceil(filteredDesserts.length / dessertsPerPage)"></v-pagination>
   </v-col>
 </v-row>
+    </v-row>
+    
 
     <v-alert border="left" close-text="Close Alert" color="green accent-4" dark dismissible
       v-if="this.$route.params.message" :value="alert">
